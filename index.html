@@ -33,6 +33,7 @@
 	</div>
 	
 	<script>
+		
 	    $(document).ready(function(){
 			$("button").click(function(){
 			   var t = $('#temp').val();//celsius
@@ -61,7 +62,7 @@
 		function tempCalculator(t,u){
 			var t1;
 			var u1;
-			
+			var result;
 			if(u == "F"){
 				t1 = t * (9/5) + 32;
 				u1 = "Fahrenheit";
@@ -73,7 +74,8 @@
 				u1 = "Kelvin";
 			}
 			
-			alert("Temperature is "+t1+" in "+u1);
+			result = "Temperature is "+t1+" in "+u1;
+			document.getElementById("result").innerHTML = result;
 		}
 
 	</script>
